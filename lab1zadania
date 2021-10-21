@@ -1,0 +1,87 @@
+# #Zad 1
+# def imie(litera, nazwisko):
+#     return(f'{litera}.{nazwisko}')
+#
+# print(imie('J','Kowalski'))
+#
+# #Zad 2
+# def zad2(imie, nazwisko):
+#     litera = imie[0]
+#     litera = litera.upper()
+#     nazwisko = nazwisko.capitalize()
+#     return (f'{litera}.{nazwisko}')
+#
+# print(zad2('jan','kowalski'))
+#
+# # Zad 3
+# def rok_urodzenia(liczby1,liczby2,wiek):
+#     rok = liczby1 + liczby2
+#     rok_ur = int(rok) - int(wiek)
+#     print(rok_ur)
+#
+# rok_urodzenia('20','21','18')
+#
+# # Zad 5
+# def dzielenie(a, b):
+#     if((a & b < 0) | (b == 0)):
+#         return -99999
+#     else:
+#         return a/b
+#
+# print(dzielenie(-1,-2))
+
+# Zad 6
+# suma = 0
+#
+# while suma < 100:
+#     liczba = input('Podaj liczbe: ')
+#     liczba = int(liczba)
+#     suma += liczba
+#     print(suma)
+
+# Zad 7
+# def funkcja_zad7(lista):
+#     krotka = tuple(lista)
+#     return krotka
+#
+# lista = ['A', 'B', 'C']
+# print(type(funkcja_zad7(lista)))
+
+# Zad 8
+# def funkcja_zad8(lista):
+#     for x in range(5):
+#         y = input('Podaj wartosc: ')
+#         lista.append(y)
+#     return tuple(lista)
+#
+# lista = []
+# print(type(funkcja_zad8(lista)))
+
+# Zad 9
+# def dzien(liczba):
+#     dni = {1: "Poniedzialek", 2: "Wtorek", 3: "Sroda", 4: "Czwartek", 5: "Piatek", 6: "Sobota", 7: "Niedziela"}
+#     return(dni[liczba])
+#
+# liczba = input("Podaj liczbe: ")
+# liczba = int(liczba)
+# print(dzien(liczba))
+
+# Zad 10
+
+# def palindrom(napis):
+#     return napis == napis[::-1]
+#
+# napis1 = "abcba"
+#
+# check = palindrom(napis1)
+# if check:
+#     print("Tak")
+# else:
+#     print("Nie")
+#
+# napis2 = "abcbc"
+# check = palindrom(napis2)
+# if check:
+#     print("Tak")
+# else:
+#     print("Nie")
