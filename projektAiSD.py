@@ -42,18 +42,18 @@ class LinkedList:
     def push(self, value:Any) -> None:
         newnode = Node(value)
         newnode.next = self.head
-        self.head = new_node
+        self.head = newnode
 
 
     def append(self, value: Any) -> None:
         newnode = Node(value)
         if self.head is None:
-            self.head = new_node
+            self.head = newnode
         else:
             temp = self.head
             while temp.next is not None:
                 temp = temp.next
-            temp.next = new_node
+            temp.next = newnode
 
 
     def node(self, at: int) -> Node:
