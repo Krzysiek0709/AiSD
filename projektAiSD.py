@@ -40,20 +40,20 @@ class LinkedList:
 
 
     def push(self, value:Any) -> None:
-        add_node = Node(value)
-        add_node.next = self.head
-        self.head = add_node
+        newnode = Node(value)
+        newnode.next = self.head
+        self.head = new_node
 
 
     def append(self, value: Any) -> None:
-        add_node = Node(value)
+        newnode = Node(value)
         if self.head is None:
-            self.head = add_node
+            self.head = new_node
         else:
             temp = self.head
             while temp.next is not None:
                 temp = temp.next
-            temp.next = add_node
+            temp.next = new_node
 
 
     def node(self, at: int) -> Node:
@@ -72,20 +72,20 @@ class LinkedList:
             return
         if after == None:
             return
-        add_node = Node(value)
-        add_node.next = after.next
-        after.next = add_node
+        newnode = Node(value)
+        newnode.next = after.next
+        after.next = newnode
 
 
     def pop(self) -> Any:
         if self.head != None:
-            rem_node = self.head
-            self.head = rem_node.next
-            return rem_node.value
+            currnode = self.head
+            self.head = currnode.next
+            return currnode.value
 
 
     def remove_last(self) -> Any:
-        add_node = self.head
+        newnode = self.head
         if len(self) == 1:
             deleted = self.head
             self.head = None
@@ -98,24 +98,24 @@ class LinkedList:
             return deleted.value
 
         if len(self) > 2:
-            add_node = self.node(len(self)-3)
-            self.tail = add_node
-            add_node = add_node.next
-            deleted = add_node.next
-            add_node.next = None
+            newnode = self.node(len(self)-3)
+            self.tail = newnode
+            newnode = newnode.next
+            deleted = newnode.next
+            newnode.next = None
             return deleted.value
 
 
     def remove(self, after: Node) -> Any:
-        add_node = self.head
+        newnode = self.head
         if after.next == self.tail:
             deleted = self.tail
             self.remove_last()
         else:
-            while add_node.next != after:
-                add_node = add_node.next
-            deleted = add_node.next
-            add_node.next = after.next
+            while newnode.next != after:
+                newnode = newnode.next
+            deleted = newnode.next
+            newnode.next = after.next
         return deleted
 
 
