@@ -23,7 +23,7 @@ class BinaryNode:
         if self.left_child is None:
             self.left_child = BinaryNode(value)
         else:
-            self.right_child.add_right_child(value)
+            self.left_child.add_left_child(value)
 
 
     def add_right_child(self,value:Any):
@@ -36,4 +36,6 @@ class BinaryNode:
 root = BinaryNode(20)
 root.add_left_child(5)
 root.add_right_child(6)
+root.add_left_child(4)
+root.add_left_child(15)
 root.PrintTree()
